@@ -1,0 +1,203 @@
+{
+	"compiler": {
+		"version": "0.8.13+commit.abaa5c0e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "contractAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "projectCreator",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "projectTitle",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "projectDesc",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "deadline",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "goalAmount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum Project.State",
+						"name": "state",
+						"type": "uint8"
+					}
+				],
+				"name": "ProjectStarted",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_addressProjectCreator",
+						"type": "address"
+					}
+				],
+				"name": "contribute",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					}
+				],
+				"name": "getProjectByAddressCreator",
+				"outputs": [
+					{
+						"internalType": "contract Project",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "retreiveFunds",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "returnAllProjects",
+				"outputs": [
+					{
+						"internalType": "contract Project[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_projectTitle",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_projectDescription",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amountGoal",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_nbDays",
+						"type": "uint256"
+					}
+				],
+				"name": "startProject",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"returnAllProjects()": {
+					"details": "Function to get all projects' contract addresses.",
+					"returns": {
+						"_0": "A list of all projects' contract addreses"
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Crowfunding.sol": "Crowfunding"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Crowfunding.sol": {
+			"keccak256": "0x10af9775ec3de998d270442642fde8adc958dadfbf173afe70eac34a3a60e627",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://abac366f739c46a90bcf89dd3783ef95775b44099639490805666bd8ccb1a78f",
+				"dweb:/ipfs/QmXGWuP9sHvE9wXyTXGwwbGnJefiZe6m86Ei91eyQ8xNHD"
+			]
+		},
+		"contracts/Project.sol": {
+			"keccak256": "0xb5918fb4f4febddf7a4fc4ac0f109e308743a01a3e5b22db17753a7b510ee4cb",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://2ef7e6d541e0774b42189a13502ea7a62b9adaa7baadc578ae8f4a4fd7a4041a",
+				"dweb:/ipfs/QmUmqTuTooiJpu66Ui7zQmtebR7Mdw5eUWkhHxV9cutjxi"
+			]
+		},
+		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol": {
+			"keccak256": "0x0f633a0223d9a1dcccfcf38a64c9de0874dfcbfac0c6941ccf074d63a2ce0e1e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://864a40efcffdf408044c332a5aa38ec5618ed7b4eecb8f65faf45671bd6cdc65",
+				"dweb:/ipfs/QmQJquTMtc6fgm5JQzGdsGpA2fqBe3MHWEdt2qzaLySMdN"
+			]
+		}
+	},
+	"version": 1
+}
